@@ -33,21 +33,21 @@
                         </table>
                 </div>
                 <div class="col-md-7 container-right">  <!----- LADO DERECHO ----->
-                   
+                    <form class="needs-validation" id="regForm" novalidate>
                         <div class="column">
                             <img id="eii" src="imagenes/eii.png" alt="">
                             <img id="umdu" src="imagenes/umdu.png" alt="">
                         </div>
                         <h3 class="container-heading">Datos Personales</h3>
                         <!---------------FORMULARIO DATOS PERSONALES ----------------->
-                        <form class="needs-validation" id="regForm" novalidate>
+                        
                             <div class="form-check">
-                            <input type="text" id="nombre" class="form-control" placeholder="Nombres *" maxlength="80" pattern="[a-zA-Z\s]{1,80}" value="">
+                            <input type="text" id="nombre" class="form-control" placeholder="Nombres *" maxlength="80" pattern="[a-zA-Z\s]{1,80}" value="" required>
                                     <div class="invalid-feedback">
                                     Formato incorrecto. </div> 
                             </div>
                             <div class="form-check">
-                                    <input type="text" class="form-control" placeholder="Apellidos *" maxlength="80" pattern="[a-zA-Z\s]{1,80}" value="">
+                                    <input type="text" class="form-control" placeholder="Apellidos *" maxlength="80" pattern="[a-zA-Z\s]{1,80}" value=""required>
                                     <div class="invalid-feedback">
                                     Formato incorrecto. </div>
                             </div>  
@@ -67,23 +67,22 @@
                                     Ingrese 9 digitos. </div> 
                             </div>
                             <!-- Al hacer click se valida el formulario y se cambia la pagina-->
-                            <div>
-                                <button class="btn btn-primary" id="btn_comenzar" type="submit" onclick="validateForm()" style="color: white;">Comenzar</button>
-                            
-                            </div>
-                            <input type="submit">
+                            <div>            
+                            <button class="btn btn-primary" id="btn_comenzar" type="submit" style="color: white;">Comenzar</button>
+                    
+                        </div>
                         </form>           
                 </div>
             </div>  
         </div>
-        
-        <script data-main="js/validar_comenzar" src="js/require-jquery.js"></script>
+         
         <script src="" async defer></script>
-        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"></script>
+        <script src="js/validar_comenzar.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"></script>
+       
     </body>
    
 </html>

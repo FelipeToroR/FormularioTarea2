@@ -1,4 +1,4 @@
-(function validacions () {
+(function () {
     'use strict'
   
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -7,23 +7,13 @@
     // Loop over them and prevent submission
     Array.prototype.slice.call(forms)
       .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
+        form.addEventListener('submit', function (event:any) {
           if (!form.checkValidity()) {
             event.preventDefault()
             event.stopPropagation()
-            
-          } else {
-              window.open('formulario.html');
           }
+          
           form.classList.add('was-validated')
         }, false)
-              
-    })
-})()
-
-btnlimpiarinputs.addEventListener('click', () =>{
-    inputs.forEach(input => input.value = '');
-})
-
-
-  
+      })
+  })()
